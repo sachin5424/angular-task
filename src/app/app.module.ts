@@ -15,6 +15,7 @@ import { AuthInterceptor } from './interceptor';
     AppComponent,
     RegisterComponent,
     LoginComponent,
+
     BlogTableComponent
   ],
   imports: [
