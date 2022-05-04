@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+    
+      <div class="col-md-12">
+
+
+<form  [formGroup]="registerForm" (ngSubmit)="Save()">
+    <div class="container">
+    
+        <div class="row">
+            <div class="col-6">
+               
+                <div class="form-group">
+                    <label for="">title</label>
+                    <input type="text"
+                      class="form-control" formControlName="title"  name="" id="" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-danger">{{formError.email}}</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="">description</label>
+                    <input type="text"
+                      class="form-control" formControlName="description"  name="" id="" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-danger">
+                        {{formError.password}}
+                    </small>
+                  </div>
+                 <button type="submit">save</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+      </div>
+      
+        <div class="col-md-6" *ngFor="let item of data">
+            <div class="card text-left">
+                <div class="card-body">
+                  <h4 class="card-title">{{item.title}}</h4>
+                  <p class="card-text">
+                      {{item.description}}
+                      
+                  </p>
+                  <small>
+                      {{item.createBy}}
+                  </small>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

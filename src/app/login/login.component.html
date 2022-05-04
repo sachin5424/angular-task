@@ -1,0 +1,31 @@
+
+
+<form  [formGroup]="registerForm" (ngSubmit)="Save()">
+    <div class="container">
+    
+        <div class="row">
+            <div class="col-6">
+                <h1>Login</h1>
+               
+                <div class="form-group">
+                    <label for="">email</label>
+                    <input type="text"
+                      class="form-control" formControlName="email"  name="" id="" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-danger">{{formError.email}}</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="">password</label>
+                    <input type="text"
+                      class="form-control" formControlName="password"  name="" id="" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-danger">
+                        {{formError.password}}
+                    </small>
+                  </div>
+                 <button type="submit">register</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<a [routerLink]="['/register']" routerLinkActive="router-link-active" >regsiter</a>
+
