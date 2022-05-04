@@ -24,10 +24,11 @@ export class LoginComponent implements OnInit {
   Save(){
     console.log(this.registerForm.value);
     this._http.post("http://localhost:3000/login",this.registerForm.value).subscribe((res:any)=>{
-      console.log(res);
+      alert('succesfully saved')
       
       window.localStorage.setItem('token',res.token);
       this._router.navigate(['blog-tabel'])
+      this.registerForm.reset()
     },(err:any)=>{
       // const errors = err.error.
 console.log(err.error.errors)

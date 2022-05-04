@@ -34,7 +34,8 @@ export class BlogTableComponent implements OnInit {
     console.log(this.registerForm.value);
     this._http.post("http://localhost:3000/private/create/blog",this.registerForm.value).subscribe((res:any)=>{
       console.log(res);
-      this.getList()
+      this.getList();
+      this.registerForm.reset();
     },(err:any)=>{
       // const errors = err.error.
 console.log(err.error.errors)
